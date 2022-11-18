@@ -1,3 +1,6 @@
+$primary: hsl(26, 52%, 75%);
+$secondary: hsl(37, 62%, 90%);
+
 .skeletonContainer {
     margin-top: 40px;
 }
@@ -9,10 +12,12 @@
 
   @keyframes skeletonLoading {
     0% {
-      background-color: hsl(200, 20%, 80%);
+      // background-color: hsl(200, 20%, 80%);
+      background-color: $primary;
     }
     100% {
-      background-color: hsl(200, 20%, 95%);
+      // background-color: hsl(200, 20%, 95%);
+      background-color: $secondary;
     }
   }
 }

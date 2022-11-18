@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <Hero />
-        <Courses />
+        {/* <Courses /> */}
       </main>
     </>
   );
