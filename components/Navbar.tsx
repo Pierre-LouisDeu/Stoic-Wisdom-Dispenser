@@ -10,21 +10,21 @@ const Navbar: React.FunctionComponent = () => {
         <ul>
           <li>
             <a href="#" className={styles.hoverUnderlineAnimation}>
-              Courses
+              Quotes
             </a>
           </li>
           <li>
             <a href="#" className={styles.hoverUnderlineAnimation}>
-              Why Us
+              Stoicism
             </a>
           </li>
           <li>
             <a href="#" className={styles.hoverUnderlineAnimation}>
-              Support
+              The Team
             </a>
           </li>
           <li>
-            <button className={styles.buttonPrimary}>Get Started</button>
+            <button className={styles.buttonPrimary}>Ghitub repos</button>
           </li>
         </ul>
       </nav>

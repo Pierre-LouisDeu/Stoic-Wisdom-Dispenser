@@ -10,6 +10,7 @@ const SkeletonText = () => {
       <div className={skeletonStyle.skeletonText} />
       <div className={skeletonStyle.skeletonText}></div>
       <div className={skeletonStyle.skeletonText}></div>
+      <div className={skeletonStyle.skeletonText}></div>
       <div className={skeletonStyle.skeletonFooter}></div>
     </div>
   );
@@ -39,21 +40,25 @@ const Hero: React.FunctionComponent = () => {
         <div className={styles.heroText}>
           <h1>Stoic Wisdom Dispenser</h1>
           {quote ? (
-            <p>
-              &quot;{quote}&quot; <br />
-              <br />
-              <span>- {author}</span>
-            </p>
+            <>
+              <p>
+                &quot;{quote}&quot; <br />
+                <br />
+                <span>- {author}</span>
+              </p>
+            </>
           ) : (
             <SkeletonText />
           )}
+        </div>
           <button
             className={styles.buttonSecondary}
-            onClick={() => {setReload(!reload), setQuote(null)}}
+            onClick={() => {
+              setReload(!reload), setQuote(null);
+            }}
           >
             Next quote
           </button>
-        </div>
       </section>
     </>
   );

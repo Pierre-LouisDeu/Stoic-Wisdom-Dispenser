@@ -4,16 +4,15 @@ $tertiary: #846b5b;
 
 html {
   position: relative;
-  // @media (max-width: 1280px) {
-  //   position: relative;
-  //   top: 70px;
-  // }
+  background-color: black;
+  height: 100%;
+  width: 100%;
+  // min-height: 800px;
 }
 
 html::after {
   content: "";
   display: block;
-  background-color: black;
   background-image: url(/assets/backgroundImage.png);
   background-position: right bottom;
   background-repeat: no-repeat;
@@ -26,18 +25,13 @@ html::after {
   background-position: 80% 10vh;
   opacity: 1;
   @media (max-width: (1.5 * 100vh)) {
-    background-size: 80%;
     background-position: right bottom;
   }
 
-  // @media (max-width: 768px) {
-  //   display: none;
-  // }
-
-  animation: 2s ease-in-out 0s 1 opacity;
+  animation: 1s ease-in-out 0s 1 opacity;
   @keyframes opacity {
     0% {
-      opacity: 0.85;
+      opacity: 0.5;
     }
     100% {
       opacity: 1;
@@ -55,7 +49,6 @@ body {
 
 ::selection {
   background: $tertiary;
-  // background: #372f7f;
 }
 
 a {

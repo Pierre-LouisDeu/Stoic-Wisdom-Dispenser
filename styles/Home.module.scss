@@ -6,13 +6,6 @@ $tertiary: #846b5b;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  justify-content: flex-start;
-}
-
-@mixin container {
-  display: flex;
-  justify-content: space-between;
-  margin: 8vh 15vw;
 }
 
 @mixin button {
@@ -36,7 +29,9 @@ $tertiary: #846b5b;
 }
 
 .navContainer {
-  @include container;
+  display: flex;
+  justify-content: space-between;
+  margin: 8vh 15vw;
   height: 55px;
   color: $secondary;
   align-items: center;
@@ -108,215 +103,68 @@ $tertiary: #846b5b;
   }
 }
 
-.hero {
-  @include container;
-  width: 450px;
-  color: $secondary;
+.heroContainer {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
 
-  .heroText {
-    // animation: translateOnX 1s ease-in-out;
-    animation: 1.5s cubic-bezier(0.47, 1.64, 0.41, 0.8) 0s 1 scaleUp;
-
-    h1 {
-      font-size: 80px;
-      font-weight: bold;
-      margin: 0;
-      @media (max-height: 900px) {
-        margin-top: 6vh;
-        font-size: 65px;
-      }
-    }
-
-    p {
-      font-size: 24px;
-      font-weight: 100;
-      padding: 20px 0 40px 0;
-      color: $secondary;
-      span {
-        color: $primary;
-        font-style: italic;
-      }
-    }
-  }
-
-  .buttonSecondary {
-    @include button;
-    border: none;
-    background-color: $tertiary;
+  .hero {
+    width: 450px;
     color: $secondary;
-    width: 150px;
-    height: 55px;
-    &:hover {
-      background-color: $primary;
-      color: black;
-      cursor: pointer;
-    }
-  }
-}
+    top: 20%;
+    margin-left: 15vw;
 
-//-----------------------------------------------------------------------------------------------
+    .heroText {
+      animation: 1.5s cubic-bezier(0.47, 1.64, 0.41, 0.8) 0s 1 scaleUp;
 
-@keyframes slideFromBottom {
-  0% {
-    transform: translateY(120%);
-  }
-  40% {
-    transform: translateY(120%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
-}
-
-.coursesContainer {
-  @include container;
-  align-items: center;
-  animation: 1s ease-in-out 0s 1 slideFromBottom;
-  color: white;
-
-  .course {
-    background-color: #00000050;
-    backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    width: 250px;
-    min-width: 250px;
-    height: 243px;
-    transition: all 0.35s ease-in-out;
-    position: relative;
-    top: 0;
-    right: 0;
-    border-radius: 20px;
-
-    .courseImage {
-      scale: 0.6;
-    }
-
-    p {
-      padding: 30px;
-      font-weight: 100;
-      // text-align: justify;
-
-      span {
+      h1 {
         font-weight: bold;
+        font-size: 7vh;
+      }
+
+      p {
+        font-size: 24px;
+        font-weight: 100;
+        padding: 20px 0 40px 0;
+        color: $secondary;
+        span {
+          color: $primary;
+          font-style: italic;
+        }
       }
     }
 
-    &:hover {
-      background-color: white;
-      cursor: pointer;
-      top: -10px;
-      right: -10px;
-      // box-shadow: -7px 7px 20px 2px rgb(55 47 127 / 25%);
-      box-shadow: -7px 7px 20px 2px rgba(0, 0, 0, 0.25);
+    .buttonSecondary {
+      @include button;
+      position: absolute;
+      bottom: 14vh;
+      border: none;
+      background-color: $tertiary;
+      color: $secondary;
+      width: 150px;
+      height: 55px;
+      animation: 1s ease-in-out 0s 1 slideFromBottom;
+
+      @media (max-height: 1000px) {
+        bottom: 8vh;
+      }
+        
+      &:hover {
+        background-color: $primary;
+        color: black;
+        cursor: pointer;
+      }
+
+      @keyframes slideFromBottom {
+        0% {
+          transform: translateY(200%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
     }
   }
 }
-
-// Media queries
-//-----------------------------------------------------------------------------------------------
-
-// @media (max-width: 1280px) {
-//   .navContainer {
-//     position: fixed;
-//     margin: auto;
-//     top: 0;
-//     left: 0;
-//     justify-content: space-evenly;
-//     z-index: 10;
-//     background-color: white;
-//     height: 70px;
-//     width: 100%;
-//     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-
-//     li:last-child {
-//       display: none;
-//     }
-//   }
-
-//   .hero {
-//     margin-left: 20vw;
-//     margin-top: 15vh;
-//     transition: all 0.5s ease-in-out;
-//     .heroText {
-//       h1 {
-//         font-size: 70px;
-//         margin-top: 0vh;
-//       }
-
-//       p {
-//         font-size: 20px;
-//       }
-//     }
-//   }
-
-//   .coursesContainer {
-//     margin: 7vh 0;
-//     .course {
-//       margin: 0 2vw;
-//       align-items: center;
-//       justify-content: space-around;
-//       text-align: center;
-//     }
-//   }
-// }
-
-// //-----------------------------------------------------------------------------------------------
-
-// @media (max-width: 768px) {
-//   .navContainer {
-//     ul {
-//       justify-content: space-around;
-//       width: 100%;
-//     }
-//     .logo {
-//       display: none;
-//     }
-//   }
-
-//   .hero {
-//     width: 100%;
-//     margin: 15px auto 30px auto;
-//     display: flex;
-//     justify-content: center;
-
-//     .heroText {
-//       width: 30rem;
-//       display: flex;
-//       flex-direction: column;
-//       align-items: center;
-//       text-align: center;
-//       background-color: #ffffff60;
-//       backdrop-filter: blur(10px);
-//       border-radius: 20px;
-//       padding: 40px;
-//       // box-shadow: 0px 0px 14px 6px rgb(0 0 0 / 25%);
-
-//       h1 {
-//         font-size: 50px;
-//       }
-//     }
-//   }
-
-//   .coursesContainer {
-//     flex-direction: column;
-
-//     .course {
-//       width: 60%;
-//       height: 30%;
-//       align-items: center;
-//       text-align: center;
-//       margin-bottom: 7vh;
-//       box-shadow: 0px 0px 14px 6px rgb(0 0 0 / 25%);
-//       transition: all 0.2s ease-in-out;
-
-//       &:hover {
-//         box-shadow: 0px 0px 10px 4px rgb(0 0 0 / 25%);
-//         top: 0;
-//         right: 0;
-//       }
-//     }
-//   }
-// }
