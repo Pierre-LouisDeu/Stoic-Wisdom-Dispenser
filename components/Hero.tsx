@@ -31,7 +31,7 @@ const Hero: React.FunctionComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchQuote();
-    }, 1000);
+    }, 10);
   }, [reload]);
 
   return (
@@ -47,18 +47,18 @@ const Hero: React.FunctionComponent = () => {
                 <span>- {author}</span>
               </p>
             </>
-          ) : (
-            <SkeletonText />
-          )}
+          ) : 
+          <SkeletonText />
+          }
         </div>
-          <button
-            className={styles.buttonSecondary}
-            onClick={() => {
-              setReload(!reload), setQuote(null);
-            }}
-          >
-            Next quote
-          </button>
+        <button
+          className={styles.buttonSecondary}
+          onClick={() => {
+            setReload(!reload), setQuote(null);
+          }}
+        >
+          Next quote
+        </button>
       </section>
     </>
   );
