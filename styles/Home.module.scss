@@ -221,3 +221,22 @@ $tertiary: #846b5b;
     }
   }
 }
+
+@media (max-height: 750px) {
+  .heroContainer {
+    .hero {
+      .heroText {
+        h1 {
+          margin: 2vh;
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.4rem;
+        }
+      }
+      .buttonSecondary {
+        bottom: 4vh;
+      }
+    }
+  }
+}
