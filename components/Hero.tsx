@@ -31,7 +31,7 @@ const Hero: React.FunctionComponent = () => {
   useEffect(() => {
     setTimeout(() => {
       fetchQuote();
-    }, 10);
+    }, 500);
   }, [reload]);
 
   return (

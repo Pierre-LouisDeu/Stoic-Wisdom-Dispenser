@@ -50,6 +50,7 @@ $tertiary: #846b5b;
     animation: 1s ease-in-out 0s 1 slideFromTop;
     display: flex;
     align-items: center;
+    margin-left: 3vw;
 
     li {
       font-weight: bold;
@@ -110,13 +111,13 @@ $tertiary: #846b5b;
   justify-content: space-between;
   align-items: flex-start;
   position: relative;
-  
+
   .hero {
     width: 450px;
     color: $secondary;
     top: 20%;
     margin-left: 15vw;
-    box-shadow: 0 0 40px 40px rgb(0, 0, 0, .5);
+    box-shadow: 0 0 40px 40px rgb(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px;
     padding: 20px;
@@ -172,6 +173,49 @@ $tertiary: #846b5b;
         }
         100% {
           transform: translateX(0);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navContainer {
+    margin: 4vh 5vw 0 5vw;
+    .logo {
+      display: none;
+    }
+    .buttonPrimary {
+      border: none;
+    }
+  }
+
+  .heroContainer {
+    margin: 0;
+
+    .hero {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+
+      .heroText {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        h1 {
+          font-size: 3.5rem;
+          margin: 4vh;
+        }
+      }
+
+      .buttonSecondary {
+        background-color: $primary;
+        color: black;
+        box-shadow: 0 0 40px 40px rgb(0, 0, 0, 0.7);
+        &:hover {
+          background-color: $tertiary;
+          color: $secondary;
         }
       }
     }
