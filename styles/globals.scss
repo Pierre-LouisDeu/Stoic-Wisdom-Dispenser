@@ -5,9 +5,8 @@ $tertiary: #846b5b;
 html {
   position: relative;
   background-color: black;
-  height: 100%;
+  height: -webkit-fill-available;
   width: 100%;
-  // min-height: 800px;
 }
 
 html::after {
@@ -42,9 +41,18 @@ html::after {
 body {
   padding: 0;
   margin: 0;
+  min-height: 100vh;
   font-family: "Helvetica";
   // font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
   //   Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+/* Avoid Chrome to see Safari hack */
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
+  }
 }
 
 ::selection {
