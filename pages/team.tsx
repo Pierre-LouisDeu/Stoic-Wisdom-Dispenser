@@ -2,10 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import Courses from "../components/PhyloTeam";
+import PhyloTeam from "../components/PhyloTeam";
 
-export default function Home() {
+
+export default function Team() {
   return (
     <>
       <Head>
@@ -17,7 +17,7 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <div className={styles.heroContainer}>
-          <Hero />
+          <PhyloTeam />
         </div>
       </main>
     </>

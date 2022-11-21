@@ -3,9 +3,10 @@ import Image from "next/image";
 import styles from "../styles/Home.module.scss";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
-import Courses from "../components/PhyloTeam";
+import StoicismDef from "../components/StoicismDef";
 
-export default function Home() {
+
+export default function Stoicism() {
   return (
     <>
       <Head>
@@ -17,7 +18,7 @@ export default function Home() {
       <main className={styles.main}>
         <Navbar />
         <div className={styles.heroContainer}>
-          <Hero />
+          <StoicismDef />
         </div>
       </main>
     </>

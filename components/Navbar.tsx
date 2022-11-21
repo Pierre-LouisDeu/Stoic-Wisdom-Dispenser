@@ -10,19 +10,28 @@ const Navbar: React.FunctionComponent = () => {
         <a className={styles.logo}></a>
         <ul>
           <li>
-            <a href="#" className={styles.hoverUnderlineAnimation}>
+            <Link
+              className={styles.hoverUnderlineAnimation}
+              href="/"
+            >
               Quotes
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className={styles.hoverUnderlineAnimation}>
+            <Link
+              className={styles.hoverUnderlineAnimation}
+              href="/stoicism"
+            >
               Stoicism
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className={styles.hoverUnderlineAnimation}>
-              The Team
-            </a>
+            <Link
+              className={styles.hoverUnderlineAnimation}
+              href="/team"
+            >
+              The team
+            </Link>
           </li>
           <Link
             className={styles.buttonPrimary}

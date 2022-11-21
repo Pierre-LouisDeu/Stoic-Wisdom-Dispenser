@@ -29,6 +29,7 @@ html::after {
 
   @media (max-width: 768px) {
     height: -webkit-fill-available;
+    background-image: none;
   }
 
   animation: 1s ease-in-out 0s 1 opacity;
