@@ -43,6 +43,27 @@ $tertiary: #846b5b;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    p {
+      text-align: center;
+      display: none;
+      position: absolute;
+      top: 3vh;
+      left: 15vw;
+      font-size: 20px;
+      font-weight: 40;
+    }
+    &:hover {
+      p {
+        background-color: #f7eddd5d;
+        backdrop-filter: blur(20px);
+        border-radius: 15px;
+        display: block;
+        color: black;
+        padding: 50px;
+        width: 20vw;
+        animation: 0.5s ease-in-out 0s 1 slideFromTop;
+      }
+    }
   }
 
   ul {
@@ -253,8 +274,8 @@ $tertiary: #846b5b;
         border-radius: 50%;
         margin-right: 5vw;
         box-shadow: 0 0 20px 20px rgb(0, 0, 0, 0.8);
-        // animation scaleUp 
-        animation: .5s linear 0s 1 imageScaleUp;
+        // animation scaleUp
+        animation: 0.5s linear 0s 1 imageScaleUp;
         transition: all 0.3s ease-in-out;
         &:hover {
           cursor: pointer;
